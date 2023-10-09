@@ -1623,12 +1623,12 @@ p {
   }
   /* header part */
   .header {
-    display: flex;
+    display: none;
   }
   .header_mobile {
     position: relative;
     margin-top: 5px;
-    display: none;
+    display: flex;
     justify-content: space-between;
   }
   .header_mobile_left {
@@ -1686,7 +1686,9 @@ p {
     top: 0;
     left: 0;
   }
-
+  .mobile_navbar {
+    overflow: scroll;
+  }
   .mobile_navbar_logo {
     height: 70px;
     background-color: #297cf0;
@@ -1765,6 +1767,13 @@ p {
   .mobile_header_text_cont {
     padding: 20px 0px;
     border-bottom: 1px #d8d8d8 solid;
+    position: relative;
+  }
+  input.mobile_checkbox {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    background-color: blue;
   }
   .mobile_social-icons {
     display: flex;
@@ -1793,11 +1802,17 @@ p {
   .mobile-footer-text > div {
     padding: 10px 0;
   }
-  .mobile_dropdown_list {
-    background-color: red;
+  .mobile_header_dropdown {
+    padding: 20px;
+    background-color: #f4f4f4;
   }
   .mobile_dropdown_list_text {
     list-style-type: circle;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    border-bottom: 1px solid #e0e0e0;
   }
   .brief_info {
     display: none;
