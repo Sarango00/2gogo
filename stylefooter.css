@@ -1673,9 +1673,16 @@ p {
     width: 15px;
     height: 15px;
   }
-  .header_mobile_right > div > img {
+  .header_mobile_right > img {
     width: 28px;
     height: 21.64px;
+    cursor: pointer;
+  }
+  #burger_checkbox {
+    display: none;
+  }
+  [id="burger_checkbox"]:checked ~ .mobile_navbar {
+    display: block;
   }
   .mobile_navbar {
     width: 100vw;
@@ -1688,6 +1695,7 @@ p {
   }
   .mobile_navbar {
     overflow: scroll;
+    display: none;
   }
   .mobile_navbar_logo {
     height: 70px;
@@ -1705,7 +1713,7 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #d8d8d8;
+    background-color: #0561c1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1767,13 +1775,29 @@ p {
   .mobile_header_text_cont {
     padding: 20px 0px;
     border-bottom: 1px #d8d8d8 solid;
-    position: relative;
   }
-  input.mobile_checkbox {
-    position: absolute;
-    top: 0px;
-    height: 100%;
-    background-color: blue;
+  .mobile_header_text_cont input {
+    display: none;
+  }
+
+  [id^="mobile_checkbox"]:checked ~ .mobile_header_dropdown {
+    display: block;
+  }
+  .mobile_checkbox {
+    display: flex;
+    gap: 5px;
+    background-color: white;
+    align-items: center;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    /* background-color: #c40097; */
+  }
+  .mobile_checkbox p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: black;
   }
   .mobile_social-icons {
     display: flex;
@@ -1805,6 +1829,7 @@ p {
   .mobile_header_dropdown {
     padding: 20px;
     background-color: #f4f4f4;
+    display: none;
   }
   .mobile_dropdown_list_text {
     list-style-type: circle;
@@ -1812,6 +1837,7 @@ p {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    cursor: pointer;
     border-bottom: 1px solid #e0e0e0;
   }
   .brief_info {
